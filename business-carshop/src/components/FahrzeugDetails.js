@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import MietFormular from './MietFormular';
 
-const FahrzeugDetails = ({ fahrzeug, zurWunschlisteHinzufuegen }) => {
-    const [mieten, setMieten] = useState(false);
+const FahrzeugDetails = ({ fahrzeug, zurWunschlisteHinzufuegen, zumWarenkorbHinzufuegen }) => {
+  const [mieten, setMieten] = useState(false);
 
   return (
     <div className="detail-container">
@@ -18,7 +18,7 @@ const FahrzeugDetails = ({ fahrzeug, zurWunschlisteHinzufuegen }) => {
           <button onClick={() => zurWunschlisteHinzufuegen(fahrzeug)}>Zur Wunschliste hinzufügen</button>
           <button onClick={() => setMieten(!mieten)}>Fahrzeug mieten</button>
         </div>
-        {mieten && <MietFormular fahrzeug={fahrzeug} />}
+        {mieten && <MietFormular fahrzeug={fahrzeug} zumWarenkorbHinzufuegen={zumWarenkorbHinzufuegen} />}
       </div>
     </div>
   );
