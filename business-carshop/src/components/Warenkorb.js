@@ -12,6 +12,7 @@ const Warenkorb = ({ warenkorb, ausWarenkorbEntfernen }) => {
             <li key={index}>
               <div className="warenkorb-item">
                 <h3>{item.name}</h3>
+                <img src={item.image}></img>
                 <p>Startdatum: {item.mietDaten.startDate.toLocaleDateString()}</p>
                 <p>Enddatum: {item.mietDaten.endDate.toLocaleDateString()}</p>
                 <p>Gesamtpreis: {item.mietDaten.totalPrice.toFixed(2)}€</p>

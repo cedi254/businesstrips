@@ -12,6 +12,7 @@ const Wunschliste = ({ wunschliste }) => {
             <li>
             <div key={fahrzeug.id} className="fahrzeug">
             <h3>{fahrzeug.name}</h3>
+            <img src={fahrzeug.image}></img>
             </div>
             </li>
         </ul>

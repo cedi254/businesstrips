@@ -7,6 +7,8 @@ import Header from './components/Header';
 import WarenkorbSeite from './pages/WarenkorbSeite';
 import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
+import EditFahrzeug from './pages/EditFahrzeug';
+import AddFahrzeug from './pages/AddFahrzeug';
 
 const App = () => {
   const [fahrzeuge, setFahrzeuge] = useState([]);
@@ -53,6 +55,8 @@ const App = () => {
         {meldung && <div className="meldung">{meldung}</div>}
         <Routes>
           <Route path="/" element={<FahrzeugListeSeite fahrzeuge={fahrzeuge} />} />
+          <Route path="/edit/:id" element={<EditFahrzeug fahrzeuge={fahrzeuge} />} />
+          <Route path="/add" element={<AddFahrzeug/>} />
           <Route path="/fahrzeug/:id" element={<FahrzeugDetailSeite fahrzeuge={fahrzeuge} zurWunschlisteHinzufuegen={zurWunschlisteHinzufuegen} zumWarenkorbHinzufuegen={zumWarenkorbHinzufuegen} />} />
           <Route path="/wunschliste" element={<WunschlisteSeite wunschliste={wunschliste} />} />
           <Route path="/warenkorb" element={<WarenkorbSeite warenkorb={warenkorb} ausWarenkorbEntfernen={ausWarenkorbEntfernen} />} />

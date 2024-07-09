@@ -4,8 +4,9 @@ import FahrzeugDetails from '../components/FahrzeugDetails';
 
 const FahrzeugDetailSeite = ({ fahrzeuge, zurWunschlisteHinzufuegen, zumWarenkorbHinzufuegen }) => {
   const { id } = useParams();
-  const fahrzeug = fahrzeuge.find(f => f.id === parseInt(id));
-
+  const fahrzeug = fahrzeuge.find(f => f.id === (id));
+  console.log(id);
+  console.log(fahrzeuge);
   if (!fahrzeug) {
     return <p>Fahrzeug nicht gefunden!</p>;
   }
