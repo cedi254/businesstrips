@@ -1,3 +1,0 @@
-"scripts": {
-  "start:json-server": "json-server --watch src/db.json --port 5000"
-}
