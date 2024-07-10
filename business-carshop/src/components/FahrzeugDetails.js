@@ -12,6 +12,7 @@ const FahrzeugDetails = ({ fahrzeug, zurWunschlisteHinzufuegen, zumWarenkorbHinz
     try {
       await axios.delete(`${apiUrl}/${fahrzeug.id}`);
       navigate('/');
+      window.location.reload();
     } catch (error) {
       console.error('Error deleting vehicle:', error);
     }

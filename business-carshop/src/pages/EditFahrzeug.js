@@ -105,6 +105,7 @@ const EditFahrzeug = () => {
     try {
       await axios.put(`${apiUrl}/${id}`, fahrzeug);
       navigate(`/fahrzeug/${id}`);
+      window.location.reload();
     } catch (error) {
       console.error('Error updating vehicle:', error);
     }

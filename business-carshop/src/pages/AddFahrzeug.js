@@ -68,6 +68,7 @@ const AddFahrzeug = () => {
     try {
       await axios.post(apiUrl, fahrzeug);
       navigate('/');
+      window.location.reload();
     } catch (error) {
       console.error('Error adding vehicle:', error);
     }
